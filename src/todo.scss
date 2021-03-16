@@ -1,0 +1,95 @@
+.header {
+    background-color: rgba(77, 77, 255, 0.726);
+    height: 200px;
+    font-size: 3rem;
+    
+    color: aliceblue;
+    text-align: center;
+    line-height: 200px;
+    .sort {
+        position:absolute;
+        top: 180px;
+        right: 10vw;
+        width: 80px;
+        height: 30px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: rgb(77, 77, 255);
+        line-height: 0;
+    }
+}
+
+.bigDiv {
+    background-color: aliceblue;
+    min-height: 100vh;
+}
+
+.todoList {
+    margin: 0 20px;
+    
+    display: flex;
+    input {
+        outline: none;
+        border: none;
+        height: 30px;
+        width: 80%;
+       flex-grow: 5;
+    }
+    button {
+        height: 30px;
+        max-width: 80px;
+        min-width: 80px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: rgba(77, 77, 255, 0.726);
+        color: aliceblue;
+        font-size: 16px;
+        flex-grow: 1;
+    }
+}
+
+
+
+.addTodo {
+   margin: 0 20px;
+    h3 {
+        position: relative;
+        color: rgba(77, 77, 255, 0.747);
+        cursor: pointer;
+    }
+}
+
+.list {
+    
+    ul {
+        list-style: none;
+        li {
+            position: relative;
+            right: 20px;
+            padding: 10px;
+            border-bottom: 1px solid rgba(77, 77, 255, 0.726);
+            color: rgba(77, 77, 255, 0.726);
+            font-size: 20px;
+            p {
+                font-size: 14px;
+            }
+            button {
+                position: absolute;
+                top: 30px;
+                right: 0px;
+                height: 30px;
+                max-width: 80px;
+                min-width: 80px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                background-color: rgba(45, 145, 53, 0.815);
+                color: aliceblue;
+                font-size: 16px;
+            }
+        }
+    }
+}
