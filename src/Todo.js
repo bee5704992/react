@@ -10,18 +10,30 @@ function Todo () {
     const [inputdate,setDate] = useState('');
     
     const addTodoItem = () => {
+        if (inputText === '') {
+            return alert(`You haven't specified a to do list`)
+        };
+        if (inputdate === '') {
+            return alert(`You haven't specified a date`)
+        };
         const newList = [...list];
         newList.push({
             text: inputText,
             date: inputdate,
         });
         setList(newList);
-        setInputText('');
+        setInputText('');        
     }
     
     function onChange(date, dateString) {
         setDate(dateString);
         
+    }
+
+    function compare(a, b) {
+        if (a.text < b.text) {return -1;}
+        if (a.text > b.text) {return 1;}
+        return 0;
     }
 
  
@@ -33,7 +45,7 @@ function Todo () {
         <div className="bigDiv">
             <div className="header">To-Do<button className="sort" onClick={()=>{
                 let data2 = [...list]
-                data2.sort()
+                data2.sort(compare)
                 setList(data2)
             }}>sort</button></div>
             <div className="addTodo"> <h3 onClick={addDiv()}>+ Add a to-do</h3></div>
